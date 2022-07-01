@@ -12,6 +12,15 @@ export const ProfileCard = styled.div`
   height: max-content;
   border: 1px solid #c2c2c2;
   border-radius: 5px;
+  cursor: pointer;
+  transform: scale(1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    background-color: #f2f6f9;
+  }
   img {margin-bottom: 20px;
   display: block;
   height: 100px;

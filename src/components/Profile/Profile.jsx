@@ -1,9 +1,9 @@
-import { ProfileCard, Description, Stats, Container, Qauntity, Name } from 'components/Profile/Profile.styled';
+import { ProfileCard, Description, Stats, Qauntity, Name } from 'components/Profile/Profile.styled';
 import PropTypes from 'prop-types';
 
-export const Profile = ({ username, tag, location, avatar, stats }) => {
-  return <Container>
-    <ProfileCard>
+export const Profile = ({ user }) => {
+  const {username,avatar,tag,location,stats} = user
+  return<ProfileCard>
       <Description>
         <img
           src={avatar}
@@ -29,17 +29,16 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
           </li>
         </Stats>
     </ProfileCard>
-  </Container>
 }
 
 Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
   avatar: PropTypes.string,
   stats: PropTypes.shape({
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
-  }).isRequired,
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
 };
