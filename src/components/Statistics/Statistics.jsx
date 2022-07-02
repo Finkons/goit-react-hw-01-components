@@ -8,7 +8,7 @@ import {
 } from './Statistics.styled';
 
 const Statistics = ({ title = 'Upload stats', stats }) => {
-  const bgrandom = () => 'hsla(' + Math.random() * 360 + ', 100%, 50%, 1)';
+  const randomColor = () => 'hsla(' + Math.random() * 360 + ', 100%, 50%, 1)';
 
   return (
     <StatisticsCard>
@@ -16,7 +16,7 @@ const Statistics = ({ title = 'Upload stats', stats }) => {
 
       <StatList>
         {stats.map(({ id, label, percentage })  =>
-          <StatItem key={id} bacgroundColor={bgrandom()}>
+          <StatItem key={id} backgroundColor={randomColor()}>
             <LineText>{label}</LineText>
             <LineText>{percentage}</LineText>
           </StatItem>
