@@ -1,11 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  display: grid;
-  place-items: center;
-  padding-block: 40px;
-}
-`;
 
 export const ProfileCard = styled.div`
   width: max-content;

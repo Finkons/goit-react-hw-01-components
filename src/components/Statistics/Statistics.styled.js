@@ -36,7 +36,7 @@ export const StatItem = styled.li`
   align-items: center;
   width: 100%;
   padding: 5px 0;
-  background-color: ${a => a.back};
+  background-color: ${a => a.bacgroundColor};
  
 `
 export const LineText = styled.span`
